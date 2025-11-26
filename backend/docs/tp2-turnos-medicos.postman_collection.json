@@ -1,0 +1,507 @@
+{
+	"info": {
+		"_postman_id": "6050836f-5652-45ab-951a-64387eb74579",
+		"name": "tp2-turnos-medicos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36886782"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjRlYTJlMWY3NTE2NGVlNzNmM2EzMyIsInJvbCI6IkFETUlOIiwibm9tYnJlIjoiQWRtaW4gVFAyIiwiaWF0IjoxNzY0MDI3MDYzLCJleHAiOjE3NjQwNTU4NjN9.cdZyWfEo_Mva0RMdScDoocxSl13lxj-B1p5flQ_2fC4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Gestor Juan\",\r\n  \"email\": \"gestor@test.com\",\r\n  \"password\": \"1234\",\r\n  \"rol\": \"GESTOR\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjRlYTJlMWY3NTE2NGVlNzNmM2EzMyIsInJvbCI6IkFETUlOIiwibm9tYnJlIjoiQWRtaW4gVFAyIiwiaWF0IjoxNzY0MDI3MDYzLCJleHAiOjE3NjQwNTU4NjN9.cdZyWfEo_Mva0RMdScDoocxSl13lxj-B1p5flQ_2fC4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjRlYTJlMWY3NTE2NGVlNzNmM2EzMyIsInJvbCI6IkFETUlOIiwibm9tYnJlIjoiQWRtaW4gVFAyIiwiaWF0IjoxNzY0MDI3MDYzLCJleHAiOjE3NjQwNTU4NjN9.cdZyWfEo_Mva0RMdScDoocxSl13lxj-B1p5flQ_2fC4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"email\": \"admin@tp2.com\",\r\n        \"password\": \"admin123\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjRlYTJlMWY3NTE2NGVlNzNmM2EzMyIsInJvbCI6IkFETUlOIiwibm9tYnJlIjoiQWRtaW4gVFAyIiwiaWF0IjoxNzY0MDI4ODcyLCJleHAiOjE3NjQwNTc2NzJ9.HIo98-nAxB7lj7ss8dCRUdfNDMexsDlymlONR58hNUs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Cardiología\",\r\n  \"descripcion\": \"Especialidad de corazón y sistema circulatorio\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/especialidades",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"especialidades"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjRlYTJlMWY3NTE2NGVlNzNmM2EzMyIsInJvbCI6IkFETUlOIiwibm9tYnJlIjoiQWRtaW4gVFAyIiwiaWF0IjoxNzY0MDI5MDA3LCJleHAiOjE3NjQwNTc4MDd9.Wle2dv7UbbQkv44oBzTn_BXTj16VdgyMsgRuZ6HcAn0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"CONSULTA DE CARDIOLOGÍA\",\r\n  \"descripcion\": \"Consulta ambulatoria\",\r\n  \"especialidadId\": \"6924f1ea602a5a74c55ce97e\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/prestaciones",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"prestaciones"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjRlYTJlMWY3NTE2NGVlNzNmM2EzMyIsInJvbCI6IkFETUlOIiwibm9tYnJlIjoiQWRtaW4gVFAyIiwiaWF0IjoxNzY0MDMwMDM4LCJleHAiOjE3NjQwNTg4Mzh9.VrxkT2ejhdXrtoc-Omz-z0KL2JNY8U3Ng8FvnCGVrgo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombreCompleto\": \"Dr. House\",\r\n  \"matricula\": \"M-12345\",\r\n  \"especialidadId\": \"6924f1ea602a5a74c55ce97e\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/profesionales",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"profesionales"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjRlYTJlMWY3NTE2NGVlNzNmM2EzMyIsInJvbCI6IkFETUlOIiwibm9tYnJlIjoiQWRtaW4gVFAyIiwiaWF0IjoxNzY0MDMwMDM4LCJleHAiOjE3NjQwNTg4Mzh9.VrxkT2ejhdXrtoc-Omz-z0KL2JNY8U3Ng8FvnCGVrgo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Consulta Cardiologia\",\r\n  \"profesionalId\": \"6924f861938cea8ea3884179\",\r\n  \"especialidadId\": \"6924f1ea602a5a74c55ce97e\",\r\n  \"prestacionesIds\": [\r\n    \"6924f286602a5a74c55ce982\",\r\n    \"6924f7e7938cea8ea3884173\",\r\n    \"6924f7b9938cea8ea388416d\"\r\n  ],\r\n  \"prestacionPrincipalId\": \"6924f286602a5a74c55ce982\",\r\n  \"limiteProspectivoDias\": 30,\r\n  \"duracionMinutos\": 30,\r\n  \"diasSemana\": [\"LUN\", \"MIE\", \"VIE\"],\r\n  \"horaInicio\": \"08:00\",\r\n  \"horaFin\": \"12:00\",\r\n  \"activa\": true\r\n}\r\n\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/agendas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"agendas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjRlYTJlMWY3NTE2NGVlNzNmM2EzMyIsInJvbCI6IkFETUlOIiwibm9tYnJlIjoiQWRtaW4gVFAyIiwiaWF0IjoxNzY0MDMwMDM4LCJleHAiOjE3NjQwNTg4Mzh9.VrxkT2ejhdXrtoc-Omz-z0KL2JNY8U3Ng8FvnCGVrgo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/agendas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"agendas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjRlYTJlMWY3NTE2NGVlNzNmM2EzMyIsInJvbCI6IkFETUlOIiwibm9tYnJlIjoiQWRtaW4gVFAyIiwiaWF0IjoxNzY0MDMxOTE1LCJleHAiOjE3NjQwNjA3MTV9.2wZDACZdE2tXWW-w0UF3MYqcsV574Z0Ks3txUzorY2Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/turnos/slots/:agendaId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"turnos",
+						"slots",
+						":agendaId"
+					],
+					"variable": [
+						{
+							"key": "agendaId",
+							"value": "6924f96e938cea8ea388417e"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjRlYTJlMWY3NTE2NGVlNzNmM2EzMyIsInJvbCI6IkFETUlOIiwibm9tYnJlIjoiQWRtaW4gVFAyIiwiaWF0IjoxNzY0MDI3MDYzLCJleHAiOjE3NjQwNTU4NjN9.cdZyWfEo_Mva0RMdScDoocxSl13lxj-B1p5flQ_2fC4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"agendaId\": \"6924f96e938cea8ea388417e\",\r\n  \"fecha\": \"2025-12-24\",\r\n  \"hora\": \"11:30\",\r\n  \"pacienteNombre\": \"Juan Pérez\",\r\n  \"pacienteDocumento\": \"30123456\",\r\n  \"prestacionesExtraIds\": [\r\n    \"6924f7e7938cea8ea3884173\",\r\n    \"6924f7b9938cea8ea388416d\"\r\n  ]\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/turnos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"turnos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjRlYTJlMWY3NTE2NGVlNzNmM2EzMyIsInJvbCI6IkFETUlOIiwibm9tYnJlIjoiQWRtaW4gVFAyIiwiaWF0IjoxNzY0MDI3MDYzLCJleHAiOjE3NjQwNTU4NjN9.cdZyWfEo_Mva0RMdScDoocxSl13lxj-B1p5flQ_2fC4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/turnos?agendaId=6924f96e938cea8ea388417e&fecha=2025-12-24",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"turnos"
+					],
+					"query": [
+						{
+							"key": "agendaId",
+							"value": "6924f96e938cea8ea388417e"
+						},
+						{
+							"key": "fecha",
+							"value": "2025-12-24"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
