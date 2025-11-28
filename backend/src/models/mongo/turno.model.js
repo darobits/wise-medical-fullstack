@@ -20,7 +20,14 @@ const TurnoSchema = new mongoose.Schema(
       required: true
     },
 
-    // Paciente (simplificado, sin entidad aparte por ahora)
+    // NUEVO: referencia al paciente en la colección Pacientes
+    pacienteId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Paciente",
+      required: false // lo dejamos opcional para no romper datos viejos / tests
+    },
+
+    // Paciente (snapshot, lo seguimos guardando igual que antes)
     pacienteNombre: { type: String, required: true },
     pacienteDocumento: { type: String, required: true },
 

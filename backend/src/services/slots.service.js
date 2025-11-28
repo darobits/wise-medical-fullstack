@@ -13,28 +13,60 @@ function minutosToHoraStr(mins) {
   return `${hh}:${mm}`;
 }
 
+function getDiaSemanaCode(date) {
+  const mapaDias = ["DOM", "LUN", "MAR", "MIE", "JUE", "VIE", "SAB"];
+  return mapaDias[date.getDay()];
+}
+
 /**
- * Genera slots para una agenda en una fecha dada.
- * Por ahora la fecha no afecta la lógica, pero la dejamos
- * para futuro (por ejemplo, excluir fines de semana).
+ * Genera slots para una agenda en una fecha concreta.
+ * Ahora soporta:
+ *  - agenda.franjas: [{ dia, horaInicio, horaFin }]
+ *  - o bien el formato legacy (diasSemana + horaInicio + horaFin)
  */
 export function generarSlotsAgenda(agenda, fecha) {
   const dur = Number(agenda.duracionMinutos);
-
   if (!dur || dur <= 0) return [];
 
-  const inicio = parseHoraToMinutos(agenda.horaInicio);
-  const fin = parseHoraToMinutos(agenda.horaFin);
+  const fechaStr = fecha.toISOString().slice(0, 10);
+  const diaCode = getDiaSemanaCode(fecha);
 
-  if (isNaN(inicio) || isNaN(fin) || fin <= inicio) return [];
+  let franjasDia = [];
+
+  if (Array.isArray(agenda.franjas) && agenda.franjas.length > 0) {
+    franjasDia = agenda.franjas.filter((f) => f.dia === diaCode);
+  } else if (
+    Array.isArray(agenda.diasSemana) &&
+    agenda.diasSemana.includes(diaCode) &&
+    agenda.horaInicio &&
+    agenda.horaFin
+  ) {
+    // compatibilidad con modelo viejo
+    franjasDia = [
+      {
+        dia: diaCode,
+        horaInicio: agenda.horaInicio,
+        horaFin: agenda.horaFin
+      }
+    ];
+  }
+
+  if (franjasDia.length === 0) return [];
 
   const slots = [];
 
-  for (let t = inicio; t + dur <= fin; t += dur) {
-    slots.push({
-      fecha: fecha.toISOString().slice(0, 10), // YYYY-MM-DD por si lo querés usar
-      hora: minutosToHoraStr(t)
-    });
+  for (const franja of franjasDia) {
+    const inicio = parseHoraToMinutos(franja.horaInicio);
+    const fin = parseHoraToMinutos(franja.horaFin);
+
+    if (isNaN(inicio) || isNaN(fin) || fin <= inicio) continue;
+
+    for (let t = inicio; t + dur <= fin; t += dur) {
+      slots.push({
+        fecha: fechaStr,
+        hora: minutosToHoraStr(t)
+      });
+    }
   }
 
   return slots;

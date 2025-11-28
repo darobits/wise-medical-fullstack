@@ -54,8 +54,15 @@ const routes = [
         path: 'agendas',
         name: 'dashboard-agendas',
         component: AgendasView
-      },
-      {
+      },{
+  path: 'agendas/:id',
+  name: 'agenda-edit',
+  component: () => import('@/views/dashboard/AgendaEditView.vue'),
+  meta: {
+    requiresAuth: true,
+    roles: ['ADMIN']
+  }
+},      {
         path: 'usuarios',
         name: 'dashboard-usuarios',
         component: UsuariosView,

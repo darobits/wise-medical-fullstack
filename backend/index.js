@@ -5,9 +5,12 @@ import cors from "cors";
 import { connectDB } from "./src/config/MongoDBConnection.js";
 import config from "./src/config/config.js";
 
-import logger from "./src/config/logger.js"; // 👈 NUEVO
+import logger from "./src/config/logger.js"; 
+
+
 
 // Rutas
+
 import indexRoutes from "./src/routes/index.routes.js";
 import authRoutes from "./src/routes/auth.routes.js";
 import usersRoutes from "./src/routes/users.routes.js";
@@ -16,7 +19,7 @@ import prestacionesRoutes from "./src/routes/prestaciones.routes.js";
 import profesionalesRoutes from "./src/routes/profesionales.routes.js";
 import agendasRoutes from "./src/routes/agendas.routes.js";
 import turnosRoutes from "./src/routes/turnos.routes.js";
-
+import pacientesRoutes from "./src/routes/pacientes.routes.js";
 // Swagger
 import swaggerUi from "swagger-ui-express";
 import { swaggerSpec } from "./docs/swagger.docs.js";
@@ -49,6 +52,7 @@ app.use("/api/prestaciones", prestacionesRoutes);
 app.use("/api/profesionales", profesionalesRoutes);
 app.use("/api/agendas", agendasRoutes);
 app.use("/api/turnos", turnosRoutes);
+app.use("/api/pacientes", pacientesRoutes);
 
 // Swagger UI
 app.use("/api/docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
