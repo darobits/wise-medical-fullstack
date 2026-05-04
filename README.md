@@ -364,37 +364,6 @@ El sistema está preparado para ser presentado como parte de un portfolio profes
 
 ---
 
-## Descripción breve para GitHub
-
-```txt
-Fullstack medical appointment management system built with Node.js, Express, MongoDB, Vue 3, Pinia and Vite.
-```
-
----
-
-## Topics sugeridos para GitHub
-
-```txt
-nodejs
-express
-mongodb
-mongoose
-jwt
-vue
-vite
-pinia
-vue-router
-axios
-fullstack
-rest-api
-swagger
-testing
-healthcare
-medical-appointments
-```
-
----
-
 ## Autor
 
 **Darío Villar**  
